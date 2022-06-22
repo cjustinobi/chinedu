@@ -1,0 +1,151 @@
+:root {
+  --app-color: #eb5757;
+  --white: #fefefe;
+  --dark-bg: #222222;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  font-family: Sen, sans-serif;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+.top-nav {
+  color: #fefefe;
+  background: var(--dark-bg);
+  text-align: center;
+  padding: 12px 0;
+}
+
+.top-nav button {
+  background: var(--app-color);
+  padding: 12px 14px;
+  border-radius: 20px;
+  color: var(--white);
+  border: none;
+  font-size: 16px;
+  margin-right: 15px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--app-color);
+  padding: 2px 20px;
+}
+
+.logo {
+  width: 70px;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  width: 50%;
+}
+
+.links li{
+  display: inline-block;
+  /*padding-left: 60px;*/
+}
+
+.links li:hover:not(:last-child) {
+  background: var(--dark-bg);
+  padding: 5px 8px;
+  border-radius: 20px;
+}
+
+.links li a{
+  color: var(--white);
+}
+
+.links img {
+  width: 40px;
+}
+
+.toggle-icon div {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+
+.toggle-icon {
+  display: none;
+}
+
+aside {
+  background: #f4b0b0;
+}
+
+
+/* ==========   SIDEBAR ========     */
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: var(--dark-bg); /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  list-style-type: ;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+/* ======== SIDEBAR ENDS ======== */
+
+
+@media (max-width: 767px) {
+  .links {
+    display: none;
+  }
+  .toggle-icon {
+    display: block;
+  }
+}
